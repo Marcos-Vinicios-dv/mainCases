@@ -1,0 +1,66 @@
+{
+  "stock": [
+    {
+      "id": 1,
+      "amount": 3
+    },
+    {
+      "id": 2,
+      "amount": 5
+    },
+    {
+      "id": 3,
+      "amount": 2
+    },
+    {
+      "id": 4,
+      "amount": 1
+    },
+    {
+      "id": 5,
+      "amount": 5
+    },
+    {
+      "id": 6,
+      "amount": 10
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Thermaltake H200",
+      "price": 200.0,
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51HKEUvAPTL._AC_SL1000_.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Aigo Rainbow",
+      "price": 189.9,
+      "image": "https://cdn.iset.io/assets/00665/produtos/2956/01.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Pichau Kazan",
+      "price": 259.9,
+      "image": "https://hotsite.pichau.com.br/descricao/PichauGaming/PGKZ-01RED/PGKZ-01RED.png"
+    },
+    {
+      "id": 5,
+      "title": "Core p3",
+      "price": 139.9,
+      "image": "https://cdn.iset.io/assets/00665/produtos/2240/86860_index_gg.png"
+    },
+    {
+      "id": 6,
+      "title": "Sharkoon TG4",
+      "price": 319.9,
+      "image": "https://images8.kabum.com.br/produtos/fotos/99518/gabinete-gamer-sharkoon-tg4-red-sem-fonte-mid-tower-usb-3-0-4-fans-preto-com-lateral-em-vidro__1545131740_g.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Pichau Lark",
+      "price": 299.9,
+      "image": "https://www.pichau.com.br/media/catalog/product/cache/d87d30820396466fbaef5d47858b9920/p/g/pg-lk-014.jpg"
+    }
+  ]
+}

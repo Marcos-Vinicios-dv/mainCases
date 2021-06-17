@@ -1,36 +1,40 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux'; 
-import { 
-  MdRemoveCircleOutline, 
-  MdAddCircleOutline, 
-  MdDelete } from 'react-icons/md';
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  MdRemoveCircleOutline,
+  MdAddCircleOutline,
+  MdDelete,
+} from 'react-icons/md';
 
 import { formatPrice } from '../../util/format';
 
 import * as CartActions from '../../store/modules/cart/actions';
 import { Container, ProductTable, Total } from './styles';
 
-
 export default function Cart() {
-  const total = useSelector(state => formatPrice(
-    state.cart.reduce((total, product) => {
-      return total + product.price * product.amount;
-    }, 0)
-  ));
+  const total = useSelector(state =>
+    formatPrice(
+      state.cart.reduce((total, product) => {
+        return total + product.price * product.amount;
+      }, 0)
+    )
+  );
 
-  const cart = useSelector(state => state.cart.map(product => ({
-    ...product,
-    subTotal: formatPrice(product.price * product.amount),
-  })));
+  const cart = useSelector(state =>
+    state.cart.map(product => ({
+      ...product,
+      subTotal: formatPrice(product.price * product.amount),
+    }))
+  );
 
   const dispatch = useDispatch();
 
   function increment(product) {
-    dispatch(CartActions.updateAmount(product.id, product.amount + 1));
+    dispatch(CartActions.updateAmountRequest(product.id, product.amount + 1));
   }
 
   function decrement(product) {
-    dispatch(CartActions.updateAmount(product.id, product.amount - 1));
+    dispatch(CartActions.updateAmountRequest(product.id, product.amount - 1));
   }
 
   return (
@@ -38,20 +42,18 @@ export default function Cart() {
       <ProductTable>
         <thead>
           <tr>
-            <th/>
+            <th />
             <th>PRODUTOS</th>
             <th>QTD</th>
             <th>SUBTOTAL</th>
-            <th/>
+            <th />
           </tr>
         </thead>
         <tbody>
-          { cart.map( product => (
-              <tr>
+          {cart.map(product => (
+            <tr>
               <td>
-                <img 
-                src={product.image}
-                alt={product.title}/>
+                <img src={product.image} alt={product.title} />
               </td>
               <td>
                 <strong>{product.title}</strong>
@@ -60,11 +62,11 @@ export default function Cart() {
               <td>
                 <div>
                   <button type="button" onClick={() => decrement(product)}>
-                  <MdRemoveCircleOutline size={20} color="#7159c1"/>
+                    <MdRemoveCircleOutline size={20} color="#7159c1" />
                   </button>
-                  <input type="number" readOnly value={product.amount}/>
+                  <input type="number" readOnly value={product.amount} />
                   <button type="button" onClick={() => increment(product)}>
-                  <MdAddCircleOutline size={20} color="#7159c1"/>
+                    <MdAddCircleOutline size={20} color="#7159c1" />
                   </button>
                 </div>
               </td>
@@ -72,23 +74,22 @@ export default function Cart() {
                 <strong>{product.subTotal}</strong>
               </td>
               <td>
-                <button 
-                  type="button" 
-                  onClick={() => 
-                    dispatch(CartActions.removeFromCart(product.id))}
+                <button
+                  type="button"
+                  onClick={() =>
+                    dispatch(CartActions.removeFromCart(product.id))
+                  }
                 >
-                  <MdDelete size={20} color="#7159c1"/>
+                  <MdDelete size={20} color="#7159c1" />
                 </button>
               </td>
             </tr>
-          )) }
+          ))}
         </tbody>
       </ProductTable>
 
       <footer>
-        <button type="button">
-          Finalizar Pedido
-        </button>
+        <button type="button">Finalizar Pedido</button>
 
         <Total>
           <span>TOTAL</span>

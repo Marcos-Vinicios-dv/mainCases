@@ -5,7 +5,8 @@
 <p>Num todo a aplicação funciona da mesma maneira para ambas, na página inicial o usuário pode escolher entre as opções dos produtos e adiciona-los ao carrinho, já no carrinho ele irá encontrar o valor total dos produtos em conjunto e uma tabela com os produtos e seus valores unitários, tendo a liberdade de exclui-los do carrinho ou aumentar a quantidade.</p>
 
 ### Imagens da aplicação:
-<img width="100%" src="https://ik.imagekit.io/6s2mndhy9tk/CaseMaker.bf995431_riV4sw2af.png" alt="Página Pricipal"></img>
+<img width="100%" src="https://ik.imagekit.io/6s2mndhy9tk/MainCases.2b690c6a_3Y6uNyy-mZ.png" alt="Página Pricipal"></img>
+<br><br>
 <img width="100%" src="https://ik.imagekit.io/6s2mndhy9tk/Captura_de_tela_de_2021-07-16_10-35-31_vcaTKPA-p.png" alt="Página Carrinho"></img>
 
 ### Tecnologias utilizadas:

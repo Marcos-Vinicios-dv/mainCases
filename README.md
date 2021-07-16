@@ -6,7 +6,7 @@
 
 ### Imagens da aplicação:
 
--Home
+- Home
 <img width="100%" src="https://ik.imagekit.io/6s2mndhy9tk/MainCases.2b690c6a_3Y6uNyy-mZ.png" alt="Página Pricipal"></img>
 
 <br><br>
